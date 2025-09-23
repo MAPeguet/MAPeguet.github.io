@@ -1,42 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Marc-Antoine Péguet - CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <Link rel="StyleSheet" href="./style.css" type="text/css" />
-    <script src="./script.js"></script>
-
-    <title>P0K3M0N</title>
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-    <h1 class="main-title">Titre de page principale</h1>
+    <header>
+        <h1>Péguet</h1>
+        <p>NLP specialist</p>
+    </header>
 
-    <p>
-        Un bloc de texte<br> sur plusieurs lignes ici<br> pour l'exemple.
-    </p>
+    <section id="profil">
+        <h2>About me</h2>
+        <p>Passionné par le langage et l'étude des donnée, je suis diplômé en Traitement Automatique des Langues, avec une spécialisation en morphosémantique et en classification automatique. Mes compétences couvrent le NLP, les modèles de langage (LLMs), la data science et la visualisation de données. Je suis à la recherche d'un poste ou une offre de doctorat en NLP, en data science ou en humanités numériques.</p>
+    </section>
 
-    <ul class="list-container">
-        <li class="list-element"><strong>élément 1</strong></li>
-        <li class="list-element">élément 2</li>
-        <li class="list-element">élément 3</li>
-        <li class="list-element">
-            <a href="./page-2/index.html">Changement de page ici</a>
-        </li>
-    </ul>
-    <p><font color="red">Je veux que ce paragraphe soit en rouge</font></p>
-    <p>Et je mets en valeur <font color="#00FF00">ce mot</font> en vert.</p>
-    
-    <p><font color="red">Je sais ! Il manque des règle issu du film.</font> 
-    <br> Mais rien ne vous empêche de regarder les règles originales <a href="https://fr.wikiquote.org/wiki/Fight_Club_(film)#:~:text=La%20premi%C3%A8re%20r%C3%A8gle%20du%20Fight,plus%2C%20le%20combat%20est%20termin%C3%A9.">ici</a> </p>
- 
+    <section id="experiences">
+        <h2>Expériences professionnelles</h2>
+        <div class="experience">
+          <h3>Poste — Nom de l’entreprise</h3>
+          <span class="date">Dates</span>
+          <p>Description des missions, technologies, réalisations.</p>
+        </div>
+    <!-- Autres expériences -->
+    </section>
 
+    <section id="formations">
+        <h2>Formations</h2>
+        <div class="formation">
+          <h3>Diplôme — Établissement</h3>
+          <span class="date">Dates</span>
+          <p>Description si nécessaire (spécialisation, mémoire, etc.).</p>
+        </div>
+    </section>
 
+    <section id="competences">
+        <h2>Compétences</h2>
+        <ul>
+          <li>Compétence 1</li>
+          <li>Compétence 2</li>
+        </ul>
+    </section>
 
-    <button class="custom-button" onclick="click_me('Mon texte en argument')">Bouton cliquable</button>
+    <section id="projets">
+        <h2>Projets personnels / réels</h2>
+        <div class="projet">
+          <h3>Nom du projet</h3>
+          <p>Brève description + technologies utilisées + lien si en ligne</p>
+        </div>
+    <!-- Autres projets -->
+    </section>
 
+    <section id="langues">
+        <h2>Langues</h2>
+        <ul>
+          <li>Langue 1 — niveau</li>
+          <li>Langue 2 — niveau</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>Email : ton.email@example.com</li>
+          <li>GitHub : <a href="https://github.com/MAPeguet">MAPeguet</a></li>
+          <li>Autre (LinkedIn, site perso…)</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© Année Ton Nom</p>
+    </footer>
 </body>
-
 </html>
