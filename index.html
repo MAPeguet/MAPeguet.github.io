@@ -113,7 +113,27 @@ Je souhaite poursuivre ce travail en doctorat, en contribuant à la modélisatio
           <li>LinkedIn : <a href="https://www.linkedin.com/in/marc-antoine-p%C3%A9guet-a749061b8/">Marc-Antoine Péguet</a></li>
         </ul>
     </section>
-
+    <script>
+        const translations = {
+            fr: {
+                title: "Mon CV",
+                education: "Master 2 Langues, Littératures et Civilisations…"
+            },
+            en: {
+                title: "My Resume",
+                education: "Master’s degree in Languages, Literatures and Civilizations…"
+            }
+        };
+    
+        let currentLang = "fr";
+        document.getElementById("lang-toggle").addEventListener("click", () => {
+            currentLang = currentLang === "fr" ? "en" : "fr";
+            document.getElementById("title").textContent = translations[currentLang].title;
+            document.getElementById("education").textContent = translations[currentLang].education;
+            document.getElementById("lang-toggle").textContent =
+                currentLang === "fr" ? "🇬🇧 English" : "🇫🇷 Version française";
+        });
+    </script>
     <footer>
         <p>© 2025 MAPéguet</p>
     </footer>
