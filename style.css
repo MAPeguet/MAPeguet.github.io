@@ -1,12 +1,56 @@
+/* --- Body et contenu général --- */
 body {
   font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  margin: 0;
   line-height: 1.6;
   color: #333;
+  display: flex; /* pour permettre sidebar + contenu */
 }
 
+/* --- Sidebar --- */
+.sidebar {
+  position: fixed;          /* reste visible lors du scroll */
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #007bff;
+}
+
+/* --- Contenu principal --- */
+.main-content {
+  margin-left: 240px;   /* espace pour la sidebar */
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* --- Header --- */
 header {
   text-align: center;
   margin-bottom: 40px;
@@ -24,6 +68,7 @@ h2 {
   padding-bottom: 5px;
 }
 
+/* --- Sections --- */
 .experience, .formation, .projet {
   margin-bottom: 20px;
 }
@@ -33,6 +78,7 @@ h2 {
   color: #666;
 }
 
+/* --- Listes --- */
 ul {
   list-style: none;
   padding: 0;
@@ -42,6 +88,7 @@ ul li {
   margin-bottom: 5px;
 }
 
+/* --- Footer --- */
 footer {
   text-align: center;
   margin-top: 40px;
