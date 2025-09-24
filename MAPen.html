@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPeguet - Home page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            /* background-color: #ebe5ce; */
+            color: #303030;
+
+        }
+        header {
+            /* background-color: #2E3B4E; */
+            /* color: white; */
+            text-align: center;
+            padding: 1.5em 0;
+        }
+
+        .container {
+            padding: 2em;
+            max-width: 1200px;
+            margin: auto;
+
+        }
+        section {
+            margin-bottom: 2em;
+            margin-left: 5%;
+            margin-right: 5%;
+
+        }
+        p {
+            text-align: justify;
+        }
+
+        a {
+            color: #303030;
+            text-decoration: none;
+
+        }
+
+        a:visited {
+            color: #6a7d45;
+
+        }
+
+        hr {
+            width: 50%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            /* background-color: #333; */
+            color: white;
+        }
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+        }        
+        .profileimg {
+            max-width: 70%;
+            max-height: auto;
+            /* border: 1px solid; */
+            margin: 5px 5px 5px 5px;
+            /* float: left; */
+        }
+
+        /* The side navigation menu */
+        .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 15%;
+        /* background-color: #f1f1f1; */
+        position: fixed;
+        height: 100%;
+        /* overflow: auto; */
+        z-index: 99999;
+        }
+
+        /* Sidebar links */
+        .sidebar a {
+        display: block;
+        font-weight: bold;
+        color: #303030;
+        padding: 16px;
+        text-decoration: none;
+        font-size: 20px;
+        }
+
+        .sidebar b {
+        display: block;
+        font-weight: bold;
+        color: #303030;
+        padding: 16px;
+        text-decoration: none;
+        font-size: 20px;
+        }
+
+        /* Active/current link */
+        .sidebar a.active {
+        /* background-color: #04AA6D; */
+        color: white;
+        }
+
+        /* Links on mouse-over */
+        .sidebar a:hover:not(.active) {
+        /* background-color: #555; */
+        color: #6a7d45;
+        }
+
+        /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+        div.content {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+        }
+        @media screen and (max-width: 1600px) {
+          .sidebar{  margin: 0;
+            padding: 0;
+            width: 10%;
+            /* background-color: #f1f1f1; */
+            position: fixed;
+            height: 100%;
+            /* overflow: auto; */
+            z-index: 99999;
+            }
+        }
+        /* On screens that are less than 700px wide, make the sidebar into a topbar */
+        @media screen and (max-width: 1350px) {
+            .sidebar {
+
+                visibility: hidden;
+
+            }
+            div.content {
+                margin-left: 0;
+            }
+            .row {
+                flex-direction: column;
+            }
+
+        }
+
+        /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+        @media screen and (max-width: 400px) {
+            .sidebar {
+                visibility: hidden;
+
+            }
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="sidebar">
+        <img src="pictures/mapeguet.jpg" alt="Picture of Marc-Antoine Péguet" class="profileimg">
+
+        <b href="#header">Marc-Antoine Péguet</b>
+
+        <hr>
+
+        <b>Links</b>
+
+        <hr>
+
+        <a href="https://github.com/MAPeguet" target="_blank"></i>Github</a>
+        <a href="https://www.linkedin.com/in/marc-antoine-p%C3%A9guet-a749061b8/" target="_blank"></i>LinkedIn</a>
+        <a href="CV_MAPeguet_fr.pdf" target="_blank">CV (French)</a>
+        <a href="CV_MAPeguet_en.pdf" target="_blank">CV (English)</a>
+
+        <hr>
+
+        <a href='MAP.html' target="_blank">French version</a>
+
+    </div>
+        <header id="header">
+
+                    <h1>Marc-Antoine Péguet</h1>
+                    <h2>Natural Language Processing specialist</h2>
+                    <h3>peguet.marcantoine@gmail.com</h3>
+    </header>
+
+    <div class="container">
+        <section id="about me" class="about me">
+            <h2>About me</h2>
+            <p style="text-indent: 2em;">
+                With a Master's degree in Automatic Language Processing (2024), I have worked on morphosemantics and lexical derivation through computational 
+                analysis of Russian suffixes. My background has given me expertise in derivational morphology, morphosyntactic analysis and distributional 
+                representations (word embeddings). I wish to continue this research at doctoral level, particularly in the computational modelling of word formation from 
+                a multilingual perspective.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section id="education" class="education">
+            <h2>Education</h2> 
+                <h3>2024</h3>
+                    <strong style="color: #6a7d45;">Master's Degree in Foreign and Regional Languages, Literatures and Civilisations, specialising in Automatic Language Processing<br> 
+                    (with distinction)</strong><br>    
+                    Université de Franche-Comté, Centre de Recherches Interdisciplinaires et Transculturelle (CRIT)<br>
+                    Besançon - France<br>
+                    <p style="text-indent: 2em;">
+                        <strong>Skills:</strong> Machine Learning, Deep Learning, NLP, Python, Transformers, Spacy, Sickitlearn, NLTK, Linguistics, SQL, dependency grammar
+                    </p> 
+
+                <h3>2022</h3>
+                    <strong style="color: #6a7d45;">First year Master's degree in French as a Foreign Language, specialization in Language and Education Policy and Digital Environments</strong><br>    
+                    Université de Franche-Comté, Centre de Télé-enseignement Universitaire<br>
+                    Besançon - France<br>
+                    <p style="text-indent: 2em;">
+                        <strong>Skills:</strong> The French-speaking world, Linguistics, Didactics, language policy, creation of teaching units
+                    </p>
+                
+                <h3>2021</h3>
+                    <strong style="color: #6a7d45;">Bachelor's Degree in Applied Foreign Languages (English – Russian)</strong><br>    
+                    Université de Franche-Comté, Sciences du Langage, de l’Homme et de la Société<br>
+                    Besançon - France<br>
+                    <p style="text-indent: 2em;">
+                        <strong>Erasmus experience:</strong> University of Latvia (Riga, Latvia) from February to July 2021
+                    </p>
+                    <p style="text-indent: 2em;">
+                        <strong>Skills:</strong> English, Russian, translation, Economics, management, British civilisation, American civilisation, Russian civilisation
+                    </p>
+                <h3>2018</h3>
+        </section>
+
+        <hr>
+
+        <section id="research_experience" class="research_experience">
+            <h2>Research experience</h2>
+                <h3>Feb. 2024–Aug. 2024</h3>
+                    <strong style="color: #6a7d45;">Data Science & NLP Intern: Automatic Classification of Knowledge Domains in Lexicographical Entries</strong><br>
+                    Laboratories ERIC (Université Lyon 2) & LIRIS (INSA Lyon)<br>
+                    Lyon - France<br>
+                    Supervised by Julien Velcin (ERIC) and Ludovic Moncla (LIRIS).
+                    <p style="text-indent: 2em;">
+                        <strong>Skills:</strong> Machine Learning, Deep Learning, NLP, Digital Humanities, Python, Transformers, word embeddings, BERT, BERTopic
+                    </p>
+                        <div class="row">
+                            <div class="column">
+                                <ul>
+                                    <li>Development and testing of automatic classification models (BERT) to identify areas of knowledge in the ‘Dictionnaire Universel François-Latin de 
+                                        Trévoux’ (18th-century corpus).</li>
+                                    <li>Construction and enrichment of an annotated dataset based on explicit/implicit markers, using natural language processing and semantic similarity.</li>
+                                    <li>Implementation of supervised and semi-supervised approaches (constraint clustering, multi-level embeddings: word, sentence, article).</li>
+                                    <li>Diachronic analyses comparing the 1743 and 1771 editions to study thematic and stylistic evolution.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                
+                <h3>Dec. 2022–july 2024</h3>
+                    <strong style="color: #6a7d45;">Master's thesis : The morphosemantics of Russian suffixes: developing a digital resource from a paper dictionary</strong><br>
+                    Université de Franche-Comté, Centre de Recherches Interdisciplinaires et Transculturelle (CRIT)<br>
+                    Besançon - France<br>
+                    Supervised by Izabella Thomas and Yağmur Öztürk
+                    <p style="text-indent: 2em;">
+                        <strong>Skills:</strong> Morphosemantics, Linguistics, suffixation, Russian language, NLP, XML, Word-Formation
+                    </p>
+                        <div class="row">
+                            <div class="column">
+                                <ul>
+                                    <li>Linguistic analysis of nominal suffixation in Russian and its morphosemantic uses.</li>
+                                    <li>Design and structuring of a digital dictionary listing Russian noun suffixes.</li>
+                                    <li>Structuring lexicographical data to facilitate its digital exploitation in standard XML format.</li>
+                                    <li>Participation at the Fête de la Science (2024) in Besançon as a presenter at the CRIT stand.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+        </section>
+        
+        <hr>
+        
+        <section id="hard_skills" class="hard_skills">
+            <h2>Hard skills</h2>
+                <div class="row">
+                    <div class="column">
+                        <ul>
+                            <li>Programming language : <strong style="color: #6a7d45;">Python</strong></li>
+                            <li>Libraries : <strong style="color: #6a7d45;">NLTK, Spacy, Pandas, Sickitlearn</strong></li>
+                            <li>WEB : <strong style="color: #6a7d45;">HTML, CSS</strong></li>
+                            <li>IDE : <strong style="color: #6a7d45;">Visual Studio Code, Jupyter, Ollama</strong></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>Data base : <strong style="color: #6a7d45;">SQL (MySQL)</strong></li>
+                            <li>Markup : <strong style="color: #6a7d45;">XML, LATEX, TEI</strong></li>
+                            <li>Others : <strong style="color: #6a7d45;">TXM (corpus analyses), Protege (ontology), BERTopic</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+        </section>
+
+        <hr>
+
+        <section id="languages" class="languages">
+            <h2>Languages</h2>
+            <div class="row">
+                <div class="column">
+                    <ul>
+                        <li>French : Native language</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>English : C1</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>Russian : B1</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>    
+                        <li>German : A2</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2025 MAPeguet</p>
+    </footer>
+</body>
+</html>
