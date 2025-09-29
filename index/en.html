@@ -167,7 +167,7 @@
   
     <!-- sidebar: noter l'id pour le JS -->
     <div class="sidebar" id="sidebar" role="navigation" aria-label="Navigation principale">
-      <img src="pictures/mapeguet.jpg" alt="Photo de Marc-Antoine Péguet" class="profileimg"><br>
+      <img src="../pictures/mapeguet.jpg" alt="Photo de Marc-Antoine Péguet" class="profileimg"><br>
   
       <!-- nom / lien vers le header -->
       <b class="name" href="#header">Marc-Antoine Péguet</b>
@@ -176,17 +176,17 @@
   
       <div style="padding-bottom:6px;"><strong>Liens :</strong></div>
       <a class="link" href="https://github.com/MAPeguet" target="_blank" rel="noopener">
-        <img src="pictures/signe-github.png" width="20" height="20" alt="GitHub"> GitHub
+        <img src="../pictures/signe-github.png" width="20" height="20" alt="GitHub"> GitHub
       </a>
       <a class="link" href="https://www.linkedin.com/in/marc-antoine-p%C3%A9guet-a749061b8/" target="_blank" rel="noopener">
-        <img src="pictures/logo-linkedin.png" width="20" height="20" alt="LinkedIn"> LinkedIn
+        <img src="../pictures/logo-linkedin.png" width="20" height="20" alt="LinkedIn"> LinkedIn
       </a>
       <a class="link" href="CV_MAPeguet_fr.pdf" target="_blank" rel="noopener">CV <img src="pictures/french.jpg" width="20" height="14" alt="FR"></a>
       <a class="link" href="CV_MAPeguet_en.pdf" target="_blank" rel="noopener">CV <img src="pictures/english.png" width="20" height="14" alt="EN"></a>
   
       <hr>
   
-      <button class="lang-switch" onclick="switchLang()">French <img src="pictures/french.jpg" width="20" height="14" alt="FR"></a>
+      <button class="lang-switch" onclick="switchLang()">French <img src="../pictures/french.jpg" width="20" height="14" alt="FR"></a>
     </div>
   
     <!-- overlay pour fermer en cliquant à l'extérieur -->
@@ -431,7 +431,7 @@
       function updateSwitchButton() {
         const btn = document.querySelector(".lang-switch");
         if (window.location.pathname.includes("en.html")) {
-          btn.textContent = "Frenchs";
+          btn.textContent = "French";
         } else {
           btn.textContent = "English";
         }
