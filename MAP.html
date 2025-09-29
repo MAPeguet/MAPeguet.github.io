@@ -100,6 +100,24 @@
       .overlay {
         display: none;
       }
+      .lang-switch {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: #6a7d45;
+        color: white;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+      }
+      .lang-switch:hover {
+        background-color: #556635;
+      }
+
   
       /* ---------- responsive behavior ---------- */
       /* small screens: use off-canvas sidebar + hamburger */
@@ -168,7 +186,7 @@
   
       <hr>
   
-      <a class="link" href="index_en.html" target="_blank" rel="noopener">English version <img src="pictures/english.png" width="20" height="14" alt="EN"></a>
+      <button class="lang-switch" onclick="switchLang()">English <img src="pictures/english.png" width="20" height="14" alt="EN"></a>
     </div>
   
     <!-- overlay pour fermer en cliquant à l'extérieur -->
@@ -234,6 +252,43 @@
           closeSidebar();
         }
       });
+
+      function switchLang() {
+        // détecte si on est sur la version FR ou EN
+        const current = window.location.pathname;
+      
+        if (current.includes("MAP.html")) {
+          // si on est sur la version FR, aller sur EN
+          window.location.href = "index_en.html";
+        } else if (current.includes("index_en.html")) {
+          // si on est sur la version EN, revenir au FR
+          window.location.href = "MAP.html";
+        } else {
+          // par défaut : renvoie vers EN
+          window.location.href = "index_en.html";
+        }
+      }
+
+      function updateSwitchButton() {
+        const btn = document.querySelector(".lang-switch");
+        if (window.location.pathname.includes("index_en.html")) {
+          btn.textContent = "Français";
+        } else {
+          btn.textContent = "English";
+        }
+      }
+      
+      function switchLang() {
+        if (window.location.pathname.includes("index_en.html")) {
+          window.location.href = "MAP.html";
+        } else {
+          window.location.href = "index_en.html";
+        }
+      }
+      
+      // au chargement, mettre à jour le texte du bouton
+      document.addEventListener("DOMContentLoaded", updateSwitchButton);
+
     </script>
   
   </body>
