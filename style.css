@@ -118,10 +118,30 @@ html {
   td {
     padding: 0.125em 0.5em 0.25em 0.5em;
   }
+    /* Style the header */
   header {
-    margin-bottom: 4em;
-    text-align: center;
+      /* padding: 80px; some padding */
+    
+      background-image: url('../pictures/index_background.jpg');
+      background-size: cover;
+      color: black; /* white text color */
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'Ubuntu', sans-serif;
+      margin-bottom: 4em;
+    
+      /* Set a specific height */
+      min-height: 170px;
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center bottom;
+      background-repeat: no-repeat;
   }
+  
   #TOC li {
     list-style: none;
   }
@@ -135,3 +155,4 @@ html {
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
   .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
