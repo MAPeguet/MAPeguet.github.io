@@ -259,19 +259,19 @@
       
         if (current.includes("MAP.html")) {
           // si on est sur la version FR, aller sur EN
-          window.location.href = "index_en.html";
-        } else if (current.includes("index_en.html")) {
+          window.location.href = "MAPen.html";
+        } else if (current.includes("MAPen.html")) {
           // si on est sur la version EN, revenir au FR
           window.location.href = "MAP.html";
         } else {
           // par défaut : renvoie vers EN
-          window.location.href = "index_en.html";
+          window.location.href = "MAPen.html";
         }
       }
 
       function updateSwitchButton() {
         const btn = document.querySelector(".lang-switch");
-        if (window.location.pathname.includes("index_en.html")) {
+        if (window.location.pathname.includes("MAPen.html")) {
           btn.textContent = "Français";
         } else {
           btn.textContent = "English";
@@ -282,7 +282,7 @@
         if (window.location.pathname.includes("index_en.html")) {
           window.location.href = "MAP.html";
         } else {
-          window.location.href = "index_en.html";
+          window.location.href = "MAPen.html";
         }
       }
       
