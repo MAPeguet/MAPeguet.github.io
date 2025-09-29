@@ -186,7 +186,7 @@
   
       <hr>
   
-      <button class="lang-switch" onclick="switchLang()">French <img src="../pictures/french.jpg" width="20" height="14" alt="FR"></a>
+      <button class="lang-switch" onclick="switchLang()">Français <img src="../pictures/french.jpg" width="20" height="14" alt="FR"></a>
     </div>
   
     <!-- overlay pour fermer en cliquant à l'extérieur -->
@@ -416,32 +416,32 @@
         // détecte si on est sur la version FR ou EN
         const current = window.location.pathname;
       
-        if (current.includes("fr.html")) {
+        if (current.includes("../fr/index.html")) {
           // si on est sur la version FR, aller sur EN
-          window.location.href = "en.html";
-        } else if (current.includes("en.html")) {
+          window.location.href = "../en/index.html";
+        } else if (current.includes("../en/index.html")) {
           // si on est sur la version EN, revenir au FR
-          window.location.href = "fr.html";
+          window.location.href = "../fr/index.html";
         } else {
           // par défaut : renvoie vers EN
-          window.location.href = "en.html";
+          window.location.href = "../en/index.html";
         }
       }
 
       function updateSwitchButton() {
         const btn = document.querySelector(".lang-switch");
         if (window.location.pathname.includes("en.html")) {
-          btn.textContent = "French";
+          btn.textContent = "Français";
         } else {
           btn.textContent = "English";
         }
       }
       
       function switchLang() {
-        if (window.location.pathname.includes("en.html")) {
-          window.location.href = "fr.html";
+        if (window.location.pathname.includes("../en/index.html")) {
+          window.location.href = "../fr/index.html";
         } else {
-          window.location.href = "en.html";
+          window.location.href = "../en/index.html";
         }
       }
       
