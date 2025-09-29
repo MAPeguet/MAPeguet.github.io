@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Portfolio de Marc-Antoine Péguet, spécialiste en traitement automatique des langues (TAL)."/>
+    <title>MAPeguet - Home page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      /* ---------- basics ---------- */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #303030;
+      }
+      header { text-align: center; padding: 1.5em 0; }
+      /* container now reserved for page content and offset to the right of the sidebar */
+      .container {
+        padding: 2em;
+        max-width: 1200px;
+        margin-left: 220px; /* leave space for sidebar on large screens */
+        margin-right: 5%;
+      }
+      section { margin-bottom: 2em; }
+      p { text-align: justify; }
+      a { color: #303030; text-decoration: none; }
+      a:visited { color: #6a7d45; }
+      hr { width: 50%; }
+      footer { text-align: center; padding: 1em 0; color: #666; }
+  
+      .row { display: flex; flex-wrap: wrap; }
+      .column { flex: 50%; min-width: 200px; box-sizing: border-box; }
+  
+      /* profile image */
+      .profileimg {
+        max-width: 90%;
+        height: auto;
+        margin: 10px;
+        border-radius: 50%;
+        display: block;
+      }
+  
+      /* ---------- sidebar (desktop) ---------- */
+      .sidebar {
+        margin: 0;
+        padding: 0 12px;
+        width: 200px; /* fixed width for desktop */
+        background-color: #f1f1f1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 10002;
+        box-sizing: border-box;
+        overflow-y: auto;
+        transition: transform 0.3s ease;
+        /* by default visible on desktop: transform none */
+        transform: translateX(0);
+      }
+      .sidebar a, .sidebar .link-icon {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .sidebar a.link {
+        display:block;
+        font-weight: bold;
+        color: #303030;
+        padding: 10px 0;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .sidebar b, .sidebar .name {
+        display: block;
+        font-weight: bold;
+        color: #303030;
+        padding: 8px 0;
+        font-size: 18px;
+      }
+      .sidebar a:hover { color: #6a7d45; }
+  
+      /* ---------- hamburger button (hidden on desktop) ---------- */
+      .menu-toggle {
+        display: none;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        z-index: 10003;
+        background-color: #6a7d45;
+        color: white;
+        border: none;
+        padding: 10px 12px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+  
+      /* ---------- overlay (for mobile when menu open) ---------- */
+      .overlay {
+        display: none;
+      }
+      .lang-switch {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: #6a7d45;
+        color: white;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+      }
+      .lang-switch:hover {
+        background-color: #556635;
+      }
+
+  
+      /* ---------- responsive behavior ---------- */
+      /* small screens: use off-canvas sidebar + hamburger */
+      @media screen and (max-width: 1350px) {
+        .menu-toggle { display: block; }
+  
+        /* hide (move offscreen) the sidebar by default */
+        .sidebar {
+          width: 250px;               /* width of the off-canvas panel */
+          transform: translateX(-110%); /* push it left, off screen */
+          left: 0;
+          top: 0;
+          z-index: 10004;
+        }
+        /* when active -> visible on screen */
+        .sidebar.active {
+          transform: translateX(0);
+          box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+        }
+  
+        /* overlay shown when menu active */
+        .overlay {
+          display: none;
+        }
+        .overlay.active {
+          display: block;
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.35);
+          z-index: 10002;
+        }
+  
+        /* content takes full width when sidebar is hidden */
+        .container { margin-left: 0; padding-top: 60px; } 
+      }
+  
+      /* tiny screens: stack columns */
+      @media screen and (max-width: 600px) {
+        .column { flex: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+  
+    <!-- bouton hamburger -->
+    <button class="menu-toggle" aria-controls="sidebar" aria-expanded="false" onclick="toggleSidebar()">☰ Menu</button>
+  
+    <!-- sidebar: noter l'id pour le JS -->
+    <div class="sidebar" id="sidebar" role="navigation" aria-label="Navigation principale">
+      <img src="pictures/mapeguet.jpg" alt="Photo de Marc-Antoine Péguet" class="profileimg"><br>
+  
+      <!-- nom / lien vers le header -->
+      <a class="name" href="#header">Marc-Antoine Péguet</a>
+  
+      <hr>
+  
+      <div style="padding-bottom:6px;"><strong>Liens :</strong></div>
+      <a class="link" href="https://github.com/MAPeguet" target="_blank" rel="noopener">
+        <img src="pictures/signe-github.png" width="20" height="20" alt="GitHub"> GitHub
+      </a>
+      <a class="link" href="https://www.linkedin.com/in/marc-antoine-p%C3%A9guet-a749061b8/" target="_blank" rel="noopener">
+        <img src="pictures/logo-linkedin.png" width="20" height="20" alt="LinkedIn"> LinkedIn
+      </a>
+      <a class="link" href="CV_MAPeguet_fr.pdf" target="_blank" rel="noopener">CV <img src="pictures/french.jpg" width="20" height="14" alt="FR"></a>
+      <a class="link" href="CV_MAPeguet_en.pdf" target="_blank" rel="noopener">CV <img src="pictures/english.png" width="20" height="14" alt="EN"></a>
+  
+      <hr>
+  
+      <button class="lang-switch" onclick="switchLang()">French <img src="pictures/french.jpg" width="20" height="14" alt="FR"></a>
+    </div>
+  
+    <!-- overlay pour fermer en cliquant à l'extérieur -->
+    <div class="overlay" id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+  
+    <!-- contenu principal -->
+    <header id="header">
+      <h1>Marc-Antoine Péguet</h1>
+      <h2>Spécialiste en Traitement Automatique des Langues</h2>
+      <h3>peguet.marcantoine@gmail.com</h3>
+    </header>
+  
+    <div class="container">
+      <!-- (TON CONTENU EXISTANT : formations, expériences, compétences, etc.) -->
+      <!-- j'ai gardé ton contenu tel quel ici ; remplace ou ajuste si besoin -->
+      <section id="about me" class="about me">
+        <h2>A propos de moi</h2>
+        <p style="text-indent: 2em;">
+          Diplômé d’un Master en Traitement Automatique des Langues (2024), j'ai mené des recherches ...
+        </p>
+      </section>
+  
+      <!-- ... toutes les autres sections inchangées ... -->
+      <!-- pour la concision j'omets de recopier tout le contenu ; garde le tien ici -->
+      <!-- Note: tu peux copier-coller le reste de ton HTML ici après <div class="container"> -->
+    </div>
+  
+    <footer>
+      <p>2025 MAPeguet</p>
+    </footer>
+  
+    <script>
+      // JS minimal pour ouvrir/fermer le menu et gérer l'accessibilité
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      const menuToggle = document.querySelector('.menu-toggle');
+  
+      function openSidebar(){
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        menuToggle.setAttribute('aria-expanded','true');
+        overlay.setAttribute('aria-hidden','false');
+      }
+      function closeSidebar(){
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded','false');
+        overlay.setAttribute('aria-hidden','true');
+      }
+      function toggleSidebar(){
+        if(sidebar.classList.contains('active')) closeSidebar();
+        else openSidebar();
+      }
+  
+      // fermer avec la touche Escape
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape' && sidebar.classList.contains('active')) closeSidebar();
+      });
+  
+      // Quand on agrandit la fenêtre (desktop), s'assurer que le menu est fermé
+      window.addEventListener('resize', function(){
+        if(window.innerWidth > 1350){
+          closeSidebar();
+        }
+      });
+
+      function switchLang() {
+        // détecte si on est sur la version FR ou EN
+        const current = window.location.pathname;
+      
+        if (current.includes("MAP.html")) {
+          // si on est sur la version FR, aller sur EN
+          window.location.href = "MAPen.html";
+        } else if (current.includes("MAPen.html")) {
+          // si on est sur la version EN, revenir au FR
+          window.location.href = "MAP.html";
+        } else {
+          // par défaut : renvoie vers EN
+          window.location.href = "MAPen.html";
+        }
+      }
+
+      function updateSwitchButton() {
+        const btn = document.querySelector(".lang-switch");
+        if (window.location.pathname.includes("MAPen.html")) {
+          btn.textContent = "Français";
+        } else {
+          btn.textContent = "English";
+        }
+      }
+      
+      function switchLang() {
+        if (window.location.pathname.includes("MAPen.html")) {
+          window.location.href = "MAP.html";
+        } else {
+          window.location.href = "MAPen.html";
+        }
+      }
+      
+      // au chargement, mettre à jour le texte du bouton
+      document.addEventListener("DOMContentLoaded", updateSwitchButton);
+
+    </script>
+  
+  </body>
+</html>
