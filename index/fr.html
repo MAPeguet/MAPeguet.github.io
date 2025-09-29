@@ -421,32 +421,32 @@
         // détecte si on est sur la version FR ou EN
         const current = window.location.pathname;
       
-        if (current.includes("MAP.html")) {
+        if (current.includes("fr.html")) {
           // si on est sur la version FR, aller sur EN
-          window.location.href = "MAPen.html";
-        } else if (current.includes("MAPen.html")) {
+          window.location.href = "en.html";
+        } else if (current.includes("en.html")) {
           // si on est sur la version EN, revenir au FR
-          window.location.href = "MAP.html";
+          window.location.href = "fr.html";
         } else {
           // par défaut : renvoie vers EN
-          window.location.href = "MAPen.html";
+          window.location.href = "en.html";
         }
       }
 
       function updateSwitchButton() {
         const btn = document.querySelector(".lang-switch");
-        if (window.location.pathname.includes("MAPen.html")) {
-          btn.textContent = "Français";
+        if (window.location.pathname.includes("en.html")) {
+          btn.textContent = "French";
         } else {
           btn.textContent = "English";
         }
       }
       
       function switchLang() {
-        if (window.location.pathname.includes("index_en.html")) {
-          window.location.href = "MAP.html";
+        if (window.location.pathname.includes("en.html")) {
+          window.location.href = "fr.html";
         } else {
-          window.location.href = "MAPen.html";
+          window.location.href = "en.html";
         }
       }
       
