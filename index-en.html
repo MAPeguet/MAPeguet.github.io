@@ -416,21 +416,21 @@
         // détecte si on est sur la version FR ou EN
         const current = window.location.pathname;
       
-        if (current.includes("../fr/index.html")) {
+        if (current.includes("index-fr.html")) {
           // si on est sur la version FR, aller sur EN
-          window.location.href = "../en/index.html";
-        } else if (current.includes("../en/index.html")) {
+          window.location.href = "index-en.html";
+        } else if (current.includes("index-en.html")) {
           // si on est sur la version EN, revenir au FR
-          window.location.href = "../fr/index.html";
+          window.location.href = "index-fr.html";
         } else {
           // par défaut : renvoie vers EN
-          window.location.href = "../en/index.html";
+          window.location.href = "index-en.html";
         }
       }
 
       function updateSwitchButton() {
         const btn = document.querySelector(".lang-switch");
-        if (window.location.pathname.includes("../en/index.html")) {
+        if (window.location.pathname.includes("index-en.html")) {
           btn.textContent = "Français";
         } else {
           btn.textContent = "English";
@@ -438,10 +438,10 @@
       }
       
       function switchLang() {
-        if (window.location.pathname.includes("../en/index.html")) {
-          window.location.href = "../fr/index.html";
+        if (window.location.pathname.includes("index-en.html")) {
+          window.location.href = "index-fr.html";
         } else {
-          window.location.href = "../en/index.html";
+          window.location.href = "index-en.html";
         }
       }
       
