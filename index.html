@@ -68,24 +68,18 @@
         .column {
             flex: 50%;
         }        
-        .profileimg {
-            max-width: 70%;
-            max-height: auto;
-            /* border: 1px solid; */
-            margin: 5px 5px 5px 5px;
-            /* float: left; */
+        .arrondie {
+          -moz-border-radius:100px;
+          -webkit-border-radius:100px;
+          border-radius:100px;
         }
 
         /* The side navigation menu */
         .sidebar {
-        flex: 15%;
-        padding: 0;
-        width: 15%;
-        background-color: #f1f1f1;
-        position: fixed;
-        height: 100%;
-        /* overflow: auto; */
-        z-index: 99999;
+            flex: 15%; /* Set the width of the sidebar */
+            float: left;
+            background-color: #f1f1f1; /* Grey background color */
+            padding: 25px 20px 25px 35px; /* Some padding */
         }
         
         /* Sidebar links */
@@ -169,7 +163,7 @@
 </head>
 <body>
     <div class="sidebar">
-        <img src="pictures/mapeguet.jpg" alt="Picture of Marc-Antoine Péguet" class="profileimg">
+        <img src="pictures/mapeguet.jpg" alt="Picture of Marc-Antoine Péguet" width="150" height="150" class="arrondie"><br> 
 
         <b href="#header">Marc-Antoine Péguet</b>
 
@@ -379,6 +373,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
