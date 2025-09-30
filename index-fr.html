@@ -20,11 +20,12 @@
       .container {
         padding: 2em;
         max-width: 1200px;
-        margin-left: 220px; /* leave space for sidebar on large screens */
+        margin-left: 220px; 
         margin-right: 5%;
       }
       section { margin-bottom: 2em; }
-      h3 { }
+      h4 { margin: 0; font-size: 1rem; font-weight: bold; color: #333; }
+      h3 { margin: 0.3em 0; line-height: 1.4; }
       p { text-align: justify; }
       a { color: #303030; text-decoration: none; }
       a:visited { color: #6a7d45; }
@@ -33,6 +34,9 @@
   
       .row { display: flex; flex-wrap: wrap; }
       .column { flex: 50%; min-width: 200px; box-sizing: border-box; }
+      .highlight { color: #6a7d45; }
+      .keywords { text-indent: 2em; margin-top: 0.5em; }
+      .formation-item { margin-bottom: 2em; }
   
       /* profile image */
       .profileimg {
@@ -212,8 +216,46 @@
 
         <hr>
 
-        <section id="formation" class="formation">
-          <h2>Formation</h2> 
+        <section>
+          <h2>Formation</h2>
+            <div class="formation-item">
+              <h4>2024</h4>
+                <h3 class="highlight">
+                  Master Langues, Littératures et Civilisations Étrangères et Régionales, parcours Traitement Automatique des Langues
+                  <span class="block">(mention : Bien)</span>
+                </h3>
+                <p>
+                  Université Marie & Louis Pasteur, 
+                  <a href="https://crit.univ-fcomte.fr/" target="_blank">
+                    Centre de Recherches Interdisciplinaires et Transculturelle (CRIT)
+                  </a><br>
+                  Besançon – France
+                </p>
+                <p class="keywords">
+                  <strong class="highlight">Mots-clés :</strong> Machine Learning, Deep Learning, NLP, Python, Transformers, Spacy, Scikit-learn, NLTK, linguistique, SQL, grammaire de dépendance
+                </p>
+          </div>
+          
+          <div class="formation-item">
+            <h4>2022</h4>
+              <h3 class="highlight">
+                Master 1ère année Français Langue Étrangère, parcours Politiques Linguistiques – Éducatives et Environnements Numériques
+              </h3>
+              <p>
+                Université Marie & Louis Pasteur, 
+                <a href="https://sup-fc.univ-fcomte.fr/" target="_blank">
+                  Centre de Télé-enseignement Universitaire
+                </a><br>
+                Besançon – France
+              </p>
+              <p class="keywords">
+                <strong class="highlight">Mots-clés :</strong> Francophonie, linguistique, didactique, politique linguistique, conception d’unité d’enseignement
+              </p>
+          </div>
+
+          <div class="formation-item">
+            <h4>2021</h4> 
+            
             <h4>2024</h4>
               <h3 style="color: #6a7d45;">
                 Master Langues, Littératures et Civilisations Étrangères et Régionales, parcours Traitement Automatique des Langues
